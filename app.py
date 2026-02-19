@@ -113,8 +113,9 @@ for i in range(1, len(predicted_prices)):
     if predicted_prices[i] > real_prices[i-1]:
         profit += real_prices[i] - real_prices[i-1]
 
-st.write("Estimated Profit:", round(profit,2))
+st.write(f"Estimated Profit: ₹{round(profit, 2)}")
 st.write("Final Capital:", round(capital + profit,2))
 
 st.markdown("---")
+
 st.write("Developed using LSTM + Streamlit | Final Year ISE Major Project")
